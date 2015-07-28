@@ -20,5 +20,18 @@ failures vs Erros
  n the same way “@AfterClass” annotation can be used to execute a method that needs to be executed after executing all the tests in a JUnit Test Case class. It is a static method. It  will be excuted only once. ex: to close the DB connections.
 
 
+@Test
+ This annotation is used to convert a normal method to a test method.
+ @Test(expected = XX.class)
+ @Test(timeout = xx)
+ 
+@Ignore
+ this method is not tested anymore.
+ 
+@RunWith
+
+@RunWith(Suite.class)  JUnit will invoke the class it references to run the tests in that class instead of the runner built into JUnit
+@SuiteClasses({Task1.class,Task2.class,Task3.class})   all the tasks are as array
+Suite is used to do the test classes together.
 
 
