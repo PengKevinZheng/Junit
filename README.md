@@ -30,8 +30,16 @@ failures vs Erros
  
 @RunWith
 
-@RunWith(Suite.class)  JUnit will invoke the class it references to run the tests in that class instead of the runner built into JUnit
-@SuiteClasses({Task1.class,Task2.class,Task3.class})   all the tasks are as array
+1. @RunWith(Suite.class)  JUnit will invoke the class it references to run the tests in that class instead of the runner built into JUnit
+2. @SuiteClasses({Task1.class,Task2.class,Task3.class})   all the tasks are as array
 Suite is used to do the test classes together.
+
+
+@Parameters
+
+1. convert the default runner into @RunWith(Parameterized.class)
+2. declare fields to store expected value and the test value.
+3. declare a public static method whose return type is collection, with annotation @Parameters
+4. declare a public constructor with all the parameters.
 
 
